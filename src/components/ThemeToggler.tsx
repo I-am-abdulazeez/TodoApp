@@ -1,13 +1,18 @@
 import React from 'react';
 
-import { HStack, Switch, Text as NativeText, useColorMode } from 'native-base';
+import { HStack, Switch, Text, useColorMode } from 'native-base';
 
 const ThemeToggler = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+
   return (
-    <HStack space={2} alignItems="cehter">
-      <NativeText>Dark</NativeText>
-      <Switch onToggle={() => toggleColorMode} />
+    <HStack alignItems={'center'} space={2}>
+      <Text>Dark</Text>
+      <Switch
+        isChecked={colorMode === 'light' ? true : false}
+        onToggle={toggleColorMode}
+      />
+      <Text>Light</Text>
     </HStack>
   );
 };
