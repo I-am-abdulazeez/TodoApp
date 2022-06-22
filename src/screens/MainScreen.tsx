@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import {
   Box,
@@ -18,7 +18,7 @@ const MainScreen = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleisChecked = useCallback(() => {
+  const handleIsChecked = useCallback(() => {
     setIsChecked(prev => !prev);
   }, []);
 
@@ -35,9 +35,7 @@ const MainScreen = () => {
         _light={{ bg: 'blueGray.50' }}
         px={4}>
         <VStack space={5} alignItems={'center'}>
-          <Box>
-            <TaskItem isDone={isChecked} onToggleCheckbox={handleisChecked} />
-          </Box>
+          <TaskItem isDone={isChecked} onToggleCheckbox={handleIsChecked} />
           <Box>
             <Text>Hello React Native</Text>
             <Button>Submit</Button>
