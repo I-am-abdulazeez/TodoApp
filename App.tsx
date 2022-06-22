@@ -1,12 +1,12 @@
 import React from 'react';
 
 import AppContainer from './src/components/AppContainer';
-import MainScreen from './src/screens/MainScreen';
+import AppRoutes from './src';
 
 const App = () => {
   return (
     <AppContainer>
-      <MainScreen />
+      <AppRoutes />
     </AppContainer>
   );
 };
