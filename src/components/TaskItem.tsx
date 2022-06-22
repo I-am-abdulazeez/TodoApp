@@ -1,11 +1,14 @@
 import {
   Box,
   Checkbox,
+  HStack,
   Pressable,
+  Text,
   useColorModeValue,
   useToken,
 } from 'native-base';
 import React from 'react';
+import AnimatedTaskLabel from './AnimatedTaskLabel';
 
 interface Props {
   isDone: boolean;
@@ -34,11 +37,28 @@ const TaskItem = (props: Props) => {
     useColorModeValue('muted.400', 'muted.600'),
   );
   return (
-    <Box width={30} height={30} mr={2}>
-      <Pressable onPress={onToggleCheckbox}>
-        <Checkbox value="checkbox-task" isChecked={isDone} />
-      </Pressable>
-    </Box>
+    <HStack
+      py={2}
+      px={4}
+      w="full"
+      alignItems={'center'}
+      bg={useColorModeValue('warmGray.50', 'primary.900')}>
+      <Box mr={2}>
+        <Checkbox
+          value="checkbox-task"
+          size={'lg'}
+          isChecked={isDone}
+          onChange={onToggleCheckbox}
+          accessibilityLabel="task-item"
+        />
+      </Box>
+      <AnimatedTaskLabel
+        strikethrough={isDone}
+        textColor={activeTextColor}
+        inactiveTextColor={doneTextColor}>
+        Task Item
+      </AnimatedTaskLabel>
+    </HStack>
   );
 };
 
