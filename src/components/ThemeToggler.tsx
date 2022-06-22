@@ -9,6 +9,7 @@ const ThemeToggler = () => {
     <HStack alignItems={'center'} space={2}>
       <Text>Dark</Text>
       <Switch
+        size={'lg'}
         isChecked={colorMode === 'light' ? true : false}
         onToggle={toggleColorMode}
       />
