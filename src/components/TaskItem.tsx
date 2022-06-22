@@ -17,16 +17,6 @@ interface Props {
 
 const TaskItem = (props: Props) => {
   const { isDone, onToggleCheckbox } = props;
-  // const highlightColor = useToken(
-  //   'colors',
-  //   useColorModeValue('blue.500', 'blue.400')
-  // )
-  // const boxStroke = useToken(
-  //   'colors',
-  //   useColorModeValue('muted.300', 'muted.500')
-  // )
-
-  // const checkmarkColor = useToken('colors', useColorModeValue('white', 'white'))
 
   const activeTextColor = useToken(
     'colors',
