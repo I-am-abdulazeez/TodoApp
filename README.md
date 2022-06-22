@@ -1,4 +1,4 @@
-## A TodoApp built with React-Native using the typescript template
+## React-Native todo-app
 
 ### Get Started
 
