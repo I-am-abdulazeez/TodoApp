@@ -1,13 +1,13 @@
+import React from 'react';
+
 import {
   Box,
   Checkbox,
   HStack,
-  Pressable,
-  Text,
   useColorModeValue,
   useToken,
 } from 'native-base';
-import React from 'react';
+
 import AnimatedTaskLabel from './AnimatedTaskLabel';
 
 interface Props {
