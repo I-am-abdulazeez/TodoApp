@@ -1,7 +1,8 @@
 import React from 'react';
 
-import AppContainer from './src/components/AppContainer';
-import AppRoutes from './src';
+import AppRoutes from '@routes/index';
+
+import AppContainer from '@components/AppContainer';
 
 const App = () => {
   return (
