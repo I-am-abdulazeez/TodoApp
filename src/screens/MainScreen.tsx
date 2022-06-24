@@ -11,8 +11,8 @@ import {
   VStack,
 } from 'native-base';
 
-import ThemeToggler from '@components/ThemeToggler';
-import TaskItem from '@components/TaskItem';
+import ThemeToggler from '../components/ThemeToggler';
+import TaskItem from '../components/TaskItem';
 
 const MainScreen = () => {
   const { colorMode, toggleColorMode } = useColorMode();
