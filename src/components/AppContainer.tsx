@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { NativeBaseProvider } from 'native-base';
 
-import { NativeBaseTheme, NavTheme } from '@assets/theme';
+import { NativeBaseTheme, NavTheme } from '../assets/theme';
 
 type Props = {
   children: React.ReactNode;
