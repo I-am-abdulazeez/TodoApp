@@ -6,7 +6,7 @@ const AboutScreen = () => {
   return (
     <VStack flex={1} bg="white">
       <Box>
-        <Text>About Screen</Text>
+        <Text>About Screen 2</Text>
       </Box>
     </VStack>
   );
